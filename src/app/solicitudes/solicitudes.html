@@ -1,0 +1,52 @@
+
+<div class="contenedor">
+
+  <h1>Programación de certificados judiciales</h1>
+
+  <form (ngSubmit)="registrar()">
+
+    <label>Nombre completo</label>
+    <input
+      type="text"
+      name="nombre"
+      [(ngModel)]="solicitud.nombre"
+      required>
+
+    <label>Número de cédula</label>
+    <input
+      type="text"
+      name="cedula"
+      [(ngModel)]="solicitud.cedula"
+      required>
+
+    <label>Fecha de ejecución</label>
+    <input
+      type="date"
+      name="fecha"
+      [(ngModel)]="solicitud.fecha_ejecucion"
+      required>
+
+    <label>Hora de ejecución</label>
+    <input
+      type="time"
+      name="hora"
+      [(ngModel)]="solicitud.hora_ejecucion"
+      required>
+
+    <label>WhatsApp</label>
+    <input
+      type="tel"
+      name="telefono"
+      [(ngModel)]="solicitud.telefono"
+      placeholder="573001234567"
+      required>
+
+    <button type="submit">
+      Programar consulta
+    </button>
+
+  </form>
+
+  <p>{{ mensaje }}</p>
+
+</div>
